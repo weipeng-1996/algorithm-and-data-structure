@@ -1,4 +1,3 @@
-str = ['h','e','l','l']
-s = ''.join(str)
-print(s)
-print(len(str))
+import math
+print(math.ceil(0.2))
+
