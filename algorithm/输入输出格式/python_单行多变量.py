@@ -4,11 +4,11 @@ import sys
 if __name__ == "__main__":
     # 一行多变量输入
     # n = map(int, input().split())
-    while:
+    while True:
         m = sys.stdin.readline().strip()
         if m == '':
             break
-        print(m)
+        print(list(map(int, m.split())))
     
     '''
     money = []

@@ -1,5 +1,9 @@
-arr = [-1 for i in range(10+1)]
-print(arr)
-arr[10] = 5
-print(arr)
-print(arr[:1])
+a = [1,2,3,4]
+print(a.pop(-2))
+print(a)
+b = {}
+b[0] = []
+print(b)
+b[0].append(a)
+print(b)
+print(len(''))
