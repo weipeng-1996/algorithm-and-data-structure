@@ -1,4 +1,4 @@
-'''链接：https://www.nowcoder.com/questionTerminal/e6e57ef2771541dfa2f1720e50bebc9a'''
+'''链接：https://blog.csdn.net/weixin_42001089/article/details/84203651'''
 
 
 def get_max_value(arr):

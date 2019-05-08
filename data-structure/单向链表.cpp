@@ -14,14 +14,14 @@ private:
 public:
 	LinkList();
 	~LinkList();
-	void create(int n);//Î²²å·¨
-	void create1(int n);//Í·²å·¨
-	int get_element(int index);//»ñÈ¡µÚindexÎ»ÖÃµÄÖµ
-	int check_element(int element);//¼ì²éÁ´±íÖĞÊÇ·ñÓĞelementÕâ¸öÖµ,ÈôÓĞ·µ»ØÆäË÷Òı£¬ÈôÃ»ÓĞ·µ»Ø0
-	void insert(int x, int index);//½«x ²åÈëµÚindexÎ»ÖÃ
-	bool isempty();//
-	void dele(int index);//É¾³ıµÚindexÎ»ÖÃµÄÔªËØ
-	void print();//´òÓ¡Á´±í
+	void create(int n);				//å°¾æ’æ³•
+	void create1(int n);			//å¤´æ’æ³•
+	int get_element(int index);		//è·å–ç¬¬indexä½ç½®çš„å€¼
+	int check_element(int element); //æ£€æŸ¥é“¾è¡¨ä¸­æ˜¯å¦æœ‰elementè¿™ä¸ªå€¼,è‹¥æœ‰è¿”å›å…¶ç´¢å¼•ï¼Œè‹¥æ²¡æœ‰è¿”å›0
+	void insert(int x, int index);  //å°†x æ’å…¥ç¬¬indexä½ç½®
+	bool isempty();					//
+	void dele(int index);			//åˆ é™¤ç¬¬indexä½ç½®çš„å…ƒç´ 
+	void print();					//æ‰“å°é“¾è¡¨
 };
 
 LinkList::LinkList()
@@ -71,11 +71,11 @@ bool LinkList::isempty() {
 
 int LinkList::get_element(int index) {
 	if (isempty()) {
-		cout << "±íÎª¿Õ" << endl;
+		cout << "è¡¨ä¸ºç©º" << endl;
 		return -1;
 	}
 	if (length < index) {
-		cout << "¸ÃÎ»ÖÃ²»´æÔÚ" << endl;
+		cout << "è¯¥ä½ç½®ä¸å­˜åœ¨" << endl;
 		return -1;
 	}
 	Node *p = head;
@@ -100,11 +100,11 @@ int LinkList::check_element(int element) {
 
 void LinkList::dele(int index) {
 	if (isempty()) {
-		cout << "±íÎª¿Õ" << endl;
+		cout << "è¡¨ä¸ºç©º" << endl;
 		return;
 	}
 	if (length < index ||index<=0) {
-		cout << "¸ÃÎ»ÖÃ²»´æÔÚ" << endl;
+		cout << "è¯¥ä½ç½®ä¸å­˜åœ¨" << endl;
 		return;
 	}
 	Node *p = head;
@@ -120,7 +120,7 @@ void LinkList::dele(int index) {
 
 void LinkList::insert(int x, int index) {
 	if (length+1 < index||index <= 0) {
-		cout << "Î»ÖÃÒì³£" << endl;
+		cout << "ä½ç½®å¼‚å¸¸" << endl;
 		return;
 	}
 	Node *p = head;
