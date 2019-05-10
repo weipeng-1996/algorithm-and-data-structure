@@ -1,3 +1,2 @@
-s = '1234'
-s = list(map(int, s))
-print(s)
+print(5//2)
+print(type(7//2))

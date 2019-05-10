@@ -6,7 +6,9 @@ struct Test{
 };
 
 int main(){
-    Test tt;
-    tt.a = 1;
-    cout<<tt.a;
+    Test *tt;
+    //cout<<tt->a<<endl;
+    int *p = new int(5);
+    cout<<p;
+    return 0;
 }
