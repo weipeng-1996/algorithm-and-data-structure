@@ -38,8 +38,7 @@ def lcs(str1, str2, max_lcs):
 if __name__ == '__main__':
     str1 = '13456778'
     str2 = '357486782'
-    lcs_matrix = get_lcs(str1, str1[-1::-1])
+    lcs_matrix = get_lcs(str1, str2)
     print(lcs_matrix)
-    res = lcs(str1, str1[-1::-1], lcs_matrix)
+    res = lcs(str1, str2, lcs_matrix)
     print(res)
-    print(str1[-1::-1])

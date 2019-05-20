@@ -21,8 +21,8 @@ def get_max_value(arr):
     return result
 
 if __name__ == '__main__':
-    num = int(input())
-    array = list(map(int, input().split()))
+    #num = int(input())
+    array = [47, 59, 81, 18, 25, 40, 56, 4]
     print(get_max_value(array))
 
 

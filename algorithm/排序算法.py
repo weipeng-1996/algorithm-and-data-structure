@@ -53,9 +53,9 @@ def qsort(ary, left, right):
         while ary[lp] < key and lp < rp:
             lp += 1
         ary[lp], ary[rp] = ary[rp], ary[lp]
-    qsort(ary, left, lp-1)
+    qsort(ary, left, lp)
     qsort(ary, rp+1, right)
-    return ary
+    return
 
 # 计数排序 n个数 大小为0-k之间 a为输入数组，b为输出数组,c为临时数组
 def count_sort(a,k):
@@ -71,13 +71,43 @@ def count_sort(a,k):
         c[a[p]] -= 1
     return b
 
+# 归并排序
+# 合并两列表
+def merge(a, b):
+    merged = []
+    i, j = 0, 0
+    while i < len(a) and j < len(b):
+        if a[i] < b[j]:
+            merged.append(a[i])
+            i += 1
+        else:
+            merged.append(b[j])
+            j += 1
+    if i == len(a):
+        merged.extend(b[j:])
+    else:
+        merged.extend(a[i:])
+    return merged
+
+# 递归分治
+def merge_sort(c):
+    if len(c) <= 1:
+        return c
+    mid = len(c) // 2
+    a = merge_sort(c[:mid])
+    b = merge_sort(c[mid:])
+    return merge(a, b)
 
 
-d = [2, 5, 3, 0, 2, 3, 0, 3]
 
+#d = [7,5,9,10,8,3,1]
 #print(maopao(a))
 #print(select_sort(b))
 #print(insert_sort(a))
 #quick_sort(b)
 #print(b)
-print(count_sort(d, 5))
+#a = quick_sort(d)
+#print(d)
+c = [7, 9, 1, 0, 4, 3, 8, 2, 5, 4, 6]
+print(merge_sort(c))
+print(c)

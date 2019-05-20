@@ -14,6 +14,6 @@ def get_min_num(coin, m):
 
 if __name__ == '__main__':
     coin_ins = [3, 6, 7]
-    money = 18
+    money = 22
     print(get_min_num(coin_ins, money))
             

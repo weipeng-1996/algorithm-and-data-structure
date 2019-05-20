@@ -21,7 +21,7 @@ def optimize(time):
     if n == 2:
         return time[1]
     opt = [1000 for i in range(n)]
-    opt[0] = 0
+    opt[0] = time[0]
     opt[1] = time[1]
     for i in range(2, n):
         opt[i] = min(opt[i-1]+time[0]+time[i], opt[i-2]+time[0]+time[i]+2*time[1])

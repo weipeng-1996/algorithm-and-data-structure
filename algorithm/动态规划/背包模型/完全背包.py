@@ -3,10 +3,9 @@ def complete_pack(weight, value, c):
     n = len(weight)
     max_value = [0 for i in range(c+1)]
     for i in range(n):
-        for w in range(1, c+1):
-            if weight[i] > w:
-                continue
+        for w in range(weight[i], c+1):
             max_value[w] = max(max_value[w], max_value[w-weight[i]]+value[i])
+            print(max_value)
     return max_value
 
 if __name__ == '__main__':

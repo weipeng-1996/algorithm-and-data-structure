@@ -9,6 +9,7 @@ if __name__ == "__main__":
         if m == '':
             break
         print(list(map(int, m.split())))
+    [n_pm, n_chengxuyuan, n_idea] = [int(i) for i in input().strip().split()]
     
     '''
     money = []

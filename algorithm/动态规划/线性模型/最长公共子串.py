@@ -34,8 +34,8 @@ def get_lcs(s1, s2, dp):
     
 
 if __name__ == '__main__':
-    s1 = 'asdfas'
-    s2 = 'werasdfaswer'
-    max_arr = get_lcs_len(s1,s2)
+    s1 = 'abcbassdwsabcba'
+    s2 = 'werassfaswer'
+    max_arr = get_lcs_len(s1,s1[-1::-1])
     print(get_lcs(s1,s2,max_arr))
 

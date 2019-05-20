@@ -6,7 +6,7 @@ def longestPalindrome(s):
     sub_str = ''
     len_sub = 0
     for i in range(l):
-        for j in range(i+1):
+        for j in range(i, -1, -1):
             if i - j <= 1:
                 if s[j] == s[i]:
                     dp[j][i] = 1
@@ -23,5 +23,5 @@ def longestPalindrome(s):
 
 
 if __name__ == '__main__':
-    str = 'cbbd'
+    str = 'cbbddwasfasddsa'
     print(longestPalindrome(str))

@@ -7,11 +7,10 @@ def mul_pack(weight, value, c, num):
     n = len(weight)
     for i in range(n):
         for k in range(num[i]): #把第i类物品展开
-            for w in range(c, 0, -1):
-                if w < weight[i]:
-                    break
+            for w in range(c, weight[i]-1, -1):
                 max_value[w] = max(max_value[w], 
                 max_value[w-weight[i]]+value[i])
+                # print(max_value)
     return max_value
 
 # 二进制思想优化
