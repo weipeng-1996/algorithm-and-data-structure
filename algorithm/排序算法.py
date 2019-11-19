@@ -55,7 +55,6 @@ def qsort(ary, left, right):
         ary[lp], ary[rp] = ary[rp], ary[lp]
     qsort(ary, left, lp)
     qsort(ary, rp+1, right)
-    return
 
 # 计数排序 n个数 大小为0-k之间 a为输入数组，b为输出数组,c为临时数组
 def count_sort(a,k):
