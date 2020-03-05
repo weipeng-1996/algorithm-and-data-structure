@@ -7,4 +7,7 @@ if __name__ == '__main__':
         print(line, ' ', type(line))
         array = list(map(int, line.split()))
         print(array)
+    # for line in sys.stdin:
+    #     m, n = map(int, line.strip().split(' '))
+    #     print(sum(m, n))
         

@@ -1,26 +1,15 @@
-import itertools
-
-
-#def permute(nums):
-#    return list(itertools.permutations(nums))
-
-
 def permute(nums):
-    res = []
-    def backtrack(nums, temp):
-        if not nums:
-            res.append(temp)
-            return
-        for i in range(len(nums)):
-            backtrack(nums[:i] + nums[i+1:], temp + [nums[i]])
-    backtrack(nums, [])
-    return res
+    def backtrack(first = 0):
+        if first == n:
+            output.append(nums[:])
+        for i in range(first, n):
+            nums[first], nums[i] = nums[i], nums[first]
+            backtrack(first + 1)
+            nums[first], nums[i] = nums[i], nums[first]
+    n = len(nums)
+    output = []
+    backtrack()
+    print(output)
 
+permute([1, 2, 3])
 
-
-            
-
-
-if __name__ == '__main__':
-    nums_ins = [1,2,3]
-    print(permute(nums_ins))
